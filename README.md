@@ -41,3 +41,12 @@ If the sections should be separated by other Uscreen content, put the divs in se
 4. Broken feed hides both sections without disrupting other content.
 5. Check desktop, tablet, mobile; images fit without cropping.
 6. Verify outgoing sponsor links and no duplicate script insertion.
+
+
+## v1.1 — Larger responsive sample advertisements
+
+The Latino sponsor uses a portrait 3:4 media area; Network Partners use a wide 16:6 area on desktop, adapting to 16:8 and 16:10 at narrower widths. Artwork uses `object-fit: contain` to avoid cropping. Sample creatives are SVG and include an explicit SAMPLE ADVERTISEMENT label in both the image and overlay.
+
+To upgrade the live site, replace the existing `sponsors.js`, `sponsors.json`, `assets/latino/sample-latino.svg`, and `assets/network/sample-network.svg` with their v1.1 versions. The Uscreen embed remains unchanged. GitHub Pages may cache files briefly; refresh after deployment.
+
+**Before sales launch:** Replace the placeholder `https://www.ibossentertainment.com/` sponsor URL with the real iBoss AdVance sponsorship inquiry landing-page URL. This link is a temporary safe destination, not a dedicated sponsorship inquiry page.

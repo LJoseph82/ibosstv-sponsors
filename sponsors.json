@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "settings": {
-    "sponsorUrl": "",
+    "sponsorUrl": "https://www.ibossentertainment.com/",
     "networkTitle": "iBossTV Network Partners",
     "networkDescription": "Supporting independent creators and stories across our network.",
     "maxChannelCards": 6,
@@ -24,9 +24,11 @@
   "sponsors": [
     {
       "id": "demo-latino-01",
-      "name": "Sample Latino Sponsor",
+      "name": "Your Brand Here — Latino Sponsorship",
       "placement": "channel",
-      "channels": ["latino"],
+      "channels": [
+        "latino"
+      ],
       "format": "portrait",
       "image": "assets/latino/sample-latino.svg",
       "url": "https://www.ibossentertainment.com/",
@@ -38,7 +40,7 @@
     },
     {
       "id": "demo-network-01",
-      "name": "Sample Network Partner",
+      "name": "iBoss AdVance — Network Sponsorship",
       "placement": "network",
       "channels": [],
       "format": "landscape",
