@@ -50,3 +50,6 @@ The Latino sponsor uses a portrait 3:4 media area; Network Partners use a wide 1
 To upgrade the live site, replace the existing `sponsors.js`, `sponsors.json`, `assets/latino/sample-latino.svg`, and `assets/network/sample-network.svg` with their v1.1 versions. The Uscreen embed remains unchanged. GitHub Pages may cache files briefly; refresh after deployment.
 
 **Before sales launch:** Replace the placeholder `https://www.ibossentertainment.com/` sponsor URL with the real iBoss AdVance sponsorship inquiry landing-page URL. This link is a temporary safe destination, not a dedicated sponsorship inquiry page.
+
+## v1.2: Three Latino sample placements
+Upload **sponsors.json** and the three new SVG files in `assets/latino/`. Existing `sponsors.js`, Uscreen embed, and Network Partners are unchanged. All three cards are labeled sample advertisements.

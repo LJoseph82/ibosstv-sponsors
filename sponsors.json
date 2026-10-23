@@ -18,19 +18,19 @@
     "music-culture": "iBossTV Music & Culture",
     "creator-central": "iBossTV Creator Central",
     "previews": "iBossTV Previews",
-    "inside-the-brand-florida": "Inside the Brand – Florida",
+    "inside-the-brand-florida": "Inside the Brand \u2013 Florida",
     "wellness-network": "iBossTV Wellness Network"
   },
   "sponsors": [
     {
       "id": "demo-latino-01",
-      "name": "Your Brand Here — Latino Sponsorship",
+      "name": "Your Brand Here \u2014 Latino Sponsorship",
       "placement": "channel",
       "channels": [
         "latino"
       ],
       "format": "portrait",
-      "image": "assets/latino/sample-latino.svg",
+      "image": "assets/latino/sample-latino-community.svg",
       "url": "https://www.ibossentertainment.com/",
       "active": true,
       "demo": true,
@@ -39,8 +39,40 @@
       "order": 1
     },
     {
+      "id": "demo-latino-02",
+      "name": "Business Spotlight \u2014 Sample Sponsorship",
+      "placement": "channel",
+      "channels": [
+        "latino"
+      ],
+      "format": "portrait",
+      "image": "assets/latino/sample-latino-business.svg",
+      "url": "https://www.ibossentertainment.com/",
+      "active": true,
+      "demo": true,
+      "startDate": "2026-01-01",
+      "endDate": "2027-12-31",
+      "order": 2
+    },
+    {
+      "id": "demo-latino-03",
+      "name": "Brand Storytelling \u2014 Sample Sponsorship",
+      "placement": "channel",
+      "channels": [
+        "latino"
+      ],
+      "format": "portrait",
+      "image": "assets/latino/sample-latino-story.svg",
+      "url": "https://www.ibossentertainment.com/",
+      "active": true,
+      "demo": true,
+      "startDate": "2026-01-01",
+      "endDate": "2027-12-31",
+      "order": 3
+    },
+    {
       "id": "demo-network-01",
-      "name": "iBoss AdVance — Network Sponsorship",
+      "name": "iBoss AdVance \u2014 Network Sponsorship",
       "placement": "network",
       "channels": [],
       "format": "landscape",
