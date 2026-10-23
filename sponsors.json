@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "settings": {
+    "sponsorUrl": "",
+    "networkTitle": "iBossTV Network Partners",
+    "networkDescription": "Supporting independent creators and stories across our network.",
+    "maxChannelCards": 6,
+    "maxNetworkCards": 4
+  },
+  "channels": {
+    "spotlight": "iBossTV Spotlight",
+    "originals": "iBossTV Originals",
+    "latino": "iBossTV Latino",
+    "caribbean": "iBossTV Caribbean",
+    "haiti": "iBossTV Haiti",
+    "kids": "iBossTV Kids",
+    "faith-purpose": "iBossTV Faith & Purpose",
+    "music-culture": "iBossTV Music & Culture",
+    "creator-central": "iBossTV Creator Central",
+    "previews": "iBossTV Previews",
+    "inside-the-brand-florida": "Inside the Brand – Florida",
+    "wellness-network": "iBossTV Wellness Network"
+  },
+  "sponsors": [
+    {
+      "id": "demo-latino-01",
+      "name": "Sample Latino Sponsor",
+      "placement": "channel",
+      "channels": ["latino"],
+      "format": "portrait",
+      "image": "assets/latino/sample-latino.svg",
+      "url": "https://www.ibossentertainment.com/",
+      "active": true,
+      "demo": true,
+      "startDate": "2026-01-01",
+      "endDate": "2027-12-31",
+      "order": 1
+    },
+    {
+      "id": "demo-network-01",
+      "name": "Sample Network Partner",
+      "placement": "network",
+      "channels": [],
+      "format": "landscape",
+      "image": "assets/network/sample-network.svg",
+      "url": "https://www.ibossentertainment.com/",
+      "active": true,
+      "demo": true,
+      "startDate": "2026-01-01",
+      "endDate": "2027-12-31",
+      "order": 1
+    }
+  ]
+}
