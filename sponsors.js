@@ -1,4 +1,4 @@
-/* iBossTV Sponsorship Display v1.0 — standalone, no dependencies. */
+/* iBossTV Sponsorship Display v1.1 — shared channel demo fallback; no dependencies. */
 (() => {
   'use strict';
   const SCRIPT = document.currentScript;
@@ -55,9 +55,29 @@
     const sponsors = Array.isArray(data.sponsors) ? data.sponsors : [];
     const today = todayUTC();
     const limit = placement === 'channel' ? data.settings?.maxChannelCards : data.settings?.maxNetworkCards;
-    const visible = sponsors.filter(s => eligible(s, placement, slug, today))
-      .sort((a,b) => (Number(a.order)||0)-(Number(b.order)||0) || String(a.id).localeCompare(String(b.id)))
-      .slice(0, Number.isInteger(limit) && limit > 0 ? limit : 12);
+    // Only recognized channel pages display channel-specific sponsorships.
+    const registered = Boolean(slug && Object.prototype.hasOwnProperty.call(data.channels || {}, slug));
+    const valid = s => s && s.active === true &&
+      (!s.startDate || (isDate(s.startDate) && s.startDate <= today)) &&
+      (!s.endDate || (isDate(s.endDate) && s.endDate >= today)) &&
+      validHttp(s.image) && validHttp(s.url);
+    const sortSponsors = list => list.sort((a,b) =>
+      (Number(a.order)||0)-(Number(b.order)||0) || String(a.id).localeCompare(String(b.id)));
+    let visible;
+    if (placement === 'channel') {
+      if (!registered) { root.replaceChildren(); root.hidden = true; return; }
+      const assigned = sortSponsors(sponsors.filter(s => valid(s) && s.placement === 'channel' &&
+        s.demo !== true && Array.isArray(s.channels) && s.channels.includes(slug)));
+      const specificDemos = sortSponsors(sponsors.filter(s => valid(s) && s.placement === 'channel' &&
+        s.demo === true && Array.isArray(s.channels) && s.channels.includes(slug)));
+      const sharedDemos = sortSponsors(sponsors.filter(s => valid(s) && s.placement === 'channel' &&
+        s.demo === true && Array.isArray(s.channels) && s.channels.includes('*')));
+      // Never present sample inventory alongside a channel's actual paid placements.
+      visible = assigned.length ? assigned : (specificDemos.length ? specificDemos : sharedDemos);
+    } else {
+      visible = sortSponsors(sponsors.filter(s => valid(s) && s.placement === 'network'));
+    }
+    visible = visible.slice(0, Number.isInteger(limit) && limit > 0 ? limit : 12);
     root.replaceChildren();
     root.hidden = visible.length === 0;
     if (!visible.length) return;
